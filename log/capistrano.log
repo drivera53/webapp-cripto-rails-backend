@@ -8060,3 +8060,186 @@ is x86_64-linux. Add the current platform to the lockfile with `bundle lock
 lockfile (rake (>= 10.0.0)).
 Either installing with `--full-index` or running `bundle update capistrano`
 should fix the problem.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-15 15:41:16 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [626fba2c] Running [ -d $HOME/.rbenv/versions/2.6.1 ] as deploy@167.172.133.67
+ DEBUG [626fba2c] Command: [ -d $HOME/.rbenv/versions/2.6.1 ]
+ DEBUG [626fba2c] Finished in 1.341 seconds with exit status 0 (successful).
+ DEBUG [8ddcbbc0] Running /usr/bin/env which passenger as deploy@167.172.133.67
+ DEBUG [8ddcbbc0] Command: /usr/bin/env which passenger
+ DEBUG [8ddcbbc0] 	/usr/bin/passenger
+ DEBUG [8ddcbbc0] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [574bcec2] Running /usr/bin/env mkdir -p /tmp as deploy@167.172.133.67
+ DEBUG [574bcec2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [574bcec2] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-3416961276105fdb717e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-3416961276105fdb717e.sh 100.0%
+  INFO [8e3c6e24] Running /usr/bin/env chmod 700 /tmp/git-ssh-3416961276105fdb717e.sh as deploy@167.172.133.67
+ DEBUG [8e3c6e24] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-3416961276105fdb717e.sh )
+  INFO [8e3c6e24] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [4c68912b] Running /usr/bin/env git ls-remote git@github.com:drivera53/webapp-cripto-rails-backend.git HEAD as deploy@167.172.133.67
+ DEBUG [4c68912b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3416961276105fdb717e.sh" ; /usr/bin/env git ls-remote git@github.com:drivera53/webapp-cripto-rails-backend.git HEAD )
+ DEBUG [4c68912b] 	3a54b6a47e794f7a5bf2b03b9d897397accc23a1	HEAD
+  INFO [4c68912b] Finished in 0.402 seconds with exit status 0 (successful).
+  INFO [bd83d1ef] Running /usr/bin/env mkdir -p /home/deploy/myapp/shared /home/deploy/myapp/releases as deploy@167.172.133.67
+ DEBUG [bd83d1ef] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env mkdir -p /home/deploy/myapp/shared /home/deploy/myapp/releases )
+  INFO [bd83d1ef] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [9efe843d] Running /usr/bin/env mkdir -p /home/deploy/myapp/shared/log /home/deploy/myapp/shared/tmp/pids /home/deploy/myapp/shared/tmp/cache /home/deploy/myapp/shared/tmp/sockets /home/deploy/myapp/shared/vendor/bundle /home/deploy/myapp/shared/.bundle /home/deploy/myapp/shared/public/system /home/deploy/myapp/shared/public/uploads as deploy@167.172.133.67
+ DEBUG [9efe843d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env mkdir -p /home/deploy/myapp/shared/log /home/deploy/myapp/shared/tmp/pids /home/deploy/myapp/shared/tmp/cache /home/deploy/myapp/shared/tmp/sockets /home/deploy/myapp/shared/vendor/bundle /home/deploy/myapp/shared/.bundle /home/deploy/myapp/shared/public/system /home/deploy/myapp/shared/public/uploads )
+  INFO [9efe843d] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [3f0c3cd5] Running [ -f /home/deploy/myapp/current/REVISION ] as deploy@167.172.133.67
+ DEBUG [3f0c3cd5] Command: [ -f /home/deploy/myapp/current/REVISION ]
+ DEBUG [3f0c3cd5] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [a3f8ebd8] Running [ -f /home/deploy/myapp/repo/HEAD ] as deploy@167.172.133.67
+ DEBUG [a3f8ebd8] Command: [ -f /home/deploy/myapp/repo/HEAD ]
+ DEBUG [a3f8ebd8] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/myapp/repo
+ DEBUG [5dc7074d] Running if test ! -d /home/deploy/myapp/repo; then echo "Directory does not exist '/home/deploy/myapp/repo'" 1>&2; false; fi as deploy@167.172.133.67
+ DEBUG [5dc7074d] Command: if test ! -d /home/deploy/myapp/repo; then echo "Directory does not exist '/home/deploy/myapp/repo'" 1>&2; false; fi
+ DEBUG [5dc7074d] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [80e253c4] Running /usr/bin/env git remote set-url origin git@github.com:drivera53/webapp-cripto-rails-backend.git as deploy@167.172.133.67
+ DEBUG [80e253c4] Command: cd /home/deploy/myapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3416961276105fdb717e.sh" ; /usr/bin/env git remote set-url origin git@github.com:drivera53/webapp-cripto-rails-backend.git )
+  INFO [80e253c4] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [535c59c1] Running /usr/bin/env git remote update --prune as deploy@167.172.133.67
+ DEBUG [535c59c1] Command: cd /home/deploy/myapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3416961276105fdb717e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [535c59c1] 	Fetching origin
+ DEBUG [535c59c1] 	From github.com:drivera53/webapp-cripto-rails-backend
+   ec6af5f..3a54b6a  main       -> main
+  INFO [535c59c1] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [1cf352c9] Running if test ! -d /home/deploy/myapp/repo; then echo "Directory does not exist '/home/deploy/myapp/repo'" 1>&2; false; fi as deploy@167.172.133.67
+ DEBUG [1cf352c9] Command: if test ! -d /home/deploy/myapp/repo; then echo "Directory does not exist '/home/deploy/myapp/repo'" 1>&2; false; fi
+ DEBUG [1cf352c9] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [0a123e8a] Running /usr/bin/env mkdir -p /home/deploy/myapp/releases/20210715194118 as deploy@167.172.133.67
+ DEBUG [0a123e8a] Command: cd /home/deploy/myapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3416961276105fdb717e.sh" ; /usr/bin/env mkdir -p /home/deploy/myapp/releases/20210715194118 )
+  INFO [0a123e8a] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [2dd59009] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/myapp/releases/20210715194118 as deploy@167.172.133.67
+ DEBUG [2dd59009] Command: cd /home/deploy/myapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3416961276105fdb717e.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/myapp/releases/20210715194118 )
+  INFO [2dd59009] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [5b8b4038] Running if test ! -d /home/deploy/myapp/repo; then echo "Directory does not exist '/home/deploy/myapp/repo'" 1>&2; false; fi as deploy@167.172.133.67
+ DEBUG [5b8b4038] Command: if test ! -d /home/deploy/myapp/repo; then echo "Directory does not exist '/home/deploy/myapp/repo'" 1>&2; false; fi
+ DEBUG [5b8b4038] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [39693136] Running /usr/bin/env git rev-list --max-count=1 main as deploy@167.172.133.67
+ DEBUG [39693136] Command: cd /home/deploy/myapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3416961276105fdb717e.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [39693136] 	3a54b6a47e794f7a5bf2b03b9d897397accc23a1
+ DEBUG [39693136] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [2858a961] Running if test ! -d /home/deploy/myapp/releases/20210715194118; then echo "Directory does not exist '/home/deploy/myapp/releases/20210715194118'" 1>&2; false; fi as deploy@167.172.133.67
+ DEBUG [2858a961] Command: if test ! -d /home/deploy/myapp/releases/20210715194118; then echo "Directory does not exist '/home/deploy/myapp/releases/20210715194118'" 1>&2; false; fi
+ DEBUG [2858a961] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [2b83703a] Running /usr/bin/env echo "3a54b6a47e794f7a5bf2b03b9d897397accc23a1" > REVISION as deploy@167.172.133.67
+ DEBUG [2b83703a] Command: cd /home/deploy/myapp/releases/20210715194118 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env echo "3a54b6a47e794f7a5bf2b03b9d897397accc23a1" > REVISION )
+  INFO [2b83703a] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [ce1a177c] Running /usr/bin/env mkdir -p /home/deploy/myapp/releases/20210715194118 /home/deploy/myapp/releases/20210715194118/tmp /home/deploy/myapp/releases/20210715194118/vendor /home/deploy/myapp/releases/20210715194118/public as deploy@167.172.133.67
+ DEBUG [ce1a177c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env mkdir -p /home/deploy/myapp/releases/20210715194118 /home/deploy/myapp/releases/20210715194118/tmp /home/deploy/myapp/releases/20210715194118/vendor /home/deploy/myapp/releases/20210715194118/public )
+  INFO [ce1a177c] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [5acbda1f] Running [ -L /home/deploy/myapp/releases/20210715194118/log ] as deploy@167.172.133.67
+ DEBUG [5acbda1f] Command: [ -L /home/deploy/myapp/releases/20210715194118/log ]
+ DEBUG [5acbda1f] Finished in 0.024 seconds with exit status 1 (failed).
+ DEBUG [62a0e30b] Running [ -d /home/deploy/myapp/releases/20210715194118/log ] as deploy@167.172.133.67
+ DEBUG [62a0e30b] Command: [ -d /home/deploy/myapp/releases/20210715194118/log ]
+ DEBUG [62a0e30b] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [ae57be62] Running /usr/bin/env rm -rf /home/deploy/myapp/releases/20210715194118/log as deploy@167.172.133.67
+ DEBUG [ae57be62] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env rm -rf /home/deploy/myapp/releases/20210715194118/log )
+  INFO [ae57be62] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [c0936141] Running /usr/bin/env ln -s /home/deploy/myapp/shared/log /home/deploy/myapp/releases/20210715194118/log as deploy@167.172.133.67
+ DEBUG [c0936141] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/log /home/deploy/myapp/releases/20210715194118/log )
+  INFO [c0936141] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [a380def3] Running [ -L /home/deploy/myapp/releases/20210715194118/tmp/pids ] as deploy@167.172.133.67
+ DEBUG [a380def3] Command: [ -L /home/deploy/myapp/releases/20210715194118/tmp/pids ]
+ DEBUG [a380def3] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [b75a2bae] Running [ -d /home/deploy/myapp/releases/20210715194118/tmp/pids ] as deploy@167.172.133.67
+ DEBUG [b75a2bae] Command: [ -d /home/deploy/myapp/releases/20210715194118/tmp/pids ]
+ DEBUG [b75a2bae] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [476ea3e3] Running /usr/bin/env rm -rf /home/deploy/myapp/releases/20210715194118/tmp/pids as deploy@167.172.133.67
+ DEBUG [476ea3e3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env rm -rf /home/deploy/myapp/releases/20210715194118/tmp/pids )
+  INFO [476ea3e3] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [db148fc8] Running /usr/bin/env ln -s /home/deploy/myapp/shared/tmp/pids /home/deploy/myapp/releases/20210715194118/tmp/pids as deploy@167.172.133.67
+ DEBUG [db148fc8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/tmp/pids /home/deploy/myapp/releases/20210715194118/tmp/pids )
+  INFO [db148fc8] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [06d26ba3] Running [ -L /home/deploy/myapp/releases/20210715194118/tmp/cache ] as deploy@167.172.133.67
+ DEBUG [06d26ba3] Command: [ -L /home/deploy/myapp/releases/20210715194118/tmp/cache ]
+ DEBUG [06d26ba3] Finished in 0.024 seconds with exit status 1 (failed).
+ DEBUG [117b1fd8] Running [ -d /home/deploy/myapp/releases/20210715194118/tmp/cache ] as deploy@167.172.133.67
+ DEBUG [117b1fd8] Command: [ -d /home/deploy/myapp/releases/20210715194118/tmp/cache ]
+ DEBUG [117b1fd8] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [76dd048a] Running /usr/bin/env rm -rf /home/deploy/myapp/releases/20210715194118/tmp/cache as deploy@167.172.133.67
+ DEBUG [76dd048a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env rm -rf /home/deploy/myapp/releases/20210715194118/tmp/cache )
+  INFO [76dd048a] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [59244612] Running /usr/bin/env ln -s /home/deploy/myapp/shared/tmp/cache /home/deploy/myapp/releases/20210715194118/tmp/cache as deploy@167.172.133.67
+ DEBUG [59244612] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/tmp/cache /home/deploy/myapp/releases/20210715194118/tmp/cache )
+  INFO [59244612] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [bdb0151f] Running [ -L /home/deploy/myapp/releases/20210715194118/tmp/sockets ] as deploy@167.172.133.67
+ DEBUG [bdb0151f] Command: [ -L /home/deploy/myapp/releases/20210715194118/tmp/sockets ]
+ DEBUG [bdb0151f] Finished in 0.036 seconds with exit status 1 (failed).
+ DEBUG [729e3d4f] Running [ -d /home/deploy/myapp/releases/20210715194118/tmp/sockets ] as deploy@167.172.133.67
+ DEBUG [729e3d4f] Command: [ -d /home/deploy/myapp/releases/20210715194118/tmp/sockets ]
+ DEBUG [729e3d4f] Finished in 0.071 seconds with exit status 1 (failed).
+  INFO [9164802b] Running /usr/bin/env ln -s /home/deploy/myapp/shared/tmp/sockets /home/deploy/myapp/releases/20210715194118/tmp/sockets as deploy@167.172.133.67
+ DEBUG [9164802b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/tmp/sockets /home/deploy/myapp/releases/20210715194118/tmp/sockets )
+  INFO [9164802b] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [bd460128] Running [ -L /home/deploy/myapp/releases/20210715194118/vendor/bundle ] as deploy@167.172.133.67
+ DEBUG [bd460128] Command: [ -L /home/deploy/myapp/releases/20210715194118/vendor/bundle ]
+ DEBUG [bd460128] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [f919d5db] Running [ -d /home/deploy/myapp/releases/20210715194118/vendor/bundle ] as deploy@167.172.133.67
+ DEBUG [f919d5db] Command: [ -d /home/deploy/myapp/releases/20210715194118/vendor/bundle ]
+ DEBUG [f919d5db] Finished in 0.027 seconds with exit status 1 (failed).
+  INFO [1023b883] Running /usr/bin/env ln -s /home/deploy/myapp/shared/vendor/bundle /home/deploy/myapp/releases/20210715194118/vendor/bundle as deploy@167.172.133.67
+ DEBUG [1023b883] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/vendor/bundle /home/deploy/myapp/releases/20210715194118/vendor/bundle )
+  INFO [1023b883] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [ff7a4978] Running [ -L /home/deploy/myapp/releases/20210715194118/.bundle ] as deploy@167.172.133.67
+ DEBUG [ff7a4978] Command: [ -L /home/deploy/myapp/releases/20210715194118/.bundle ]
+ DEBUG [ff7a4978] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [effa4fa8] Running [ -d /home/deploy/myapp/releases/20210715194118/.bundle ] as deploy@167.172.133.67
+ DEBUG [effa4fa8] Command: [ -d /home/deploy/myapp/releases/20210715194118/.bundle ]
+ DEBUG [effa4fa8] Finished in 0.070 seconds with exit status 1 (failed).
+  INFO [c125049d] Running /usr/bin/env ln -s /home/deploy/myapp/shared/.bundle /home/deploy/myapp/releases/20210715194118/.bundle as deploy@167.172.133.67
+ DEBUG [c125049d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/.bundle /home/deploy/myapp/releases/20210715194118/.bundle )
+  INFO [c125049d] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [5d216f22] Running [ -L /home/deploy/myapp/releases/20210715194118/public/system ] as deploy@167.172.133.67
+ DEBUG [5d216f22] Command: [ -L /home/deploy/myapp/releases/20210715194118/public/system ]
+ DEBUG [5d216f22] Finished in 0.072 seconds with exit status 1 (failed).
+ DEBUG [327882a8] Running [ -d /home/deploy/myapp/releases/20210715194118/public/system ] as deploy@167.172.133.67
+ DEBUG [327882a8] Command: [ -d /home/deploy/myapp/releases/20210715194118/public/system ]
+ DEBUG [327882a8] Finished in 0.027 seconds with exit status 1 (failed).
+  INFO [7e4ce64c] Running /usr/bin/env ln -s /home/deploy/myapp/shared/public/system /home/deploy/myapp/releases/20210715194118/public/system as deploy@167.172.133.67
+ DEBUG [7e4ce64c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/public/system /home/deploy/myapp/releases/20210715194118/public/system )
+  INFO [7e4ce64c] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [664ecd7d] Running [ -L /home/deploy/myapp/releases/20210715194118/public/uploads ] as deploy@167.172.133.67
+ DEBUG [664ecd7d] Command: [ -L /home/deploy/myapp/releases/20210715194118/public/uploads ]
+ DEBUG [664ecd7d] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [a5a8d0e1] Running [ -d /home/deploy/myapp/releases/20210715194118/public/uploads ] as deploy@167.172.133.67
+ DEBUG [a5a8d0e1] Command: [ -d /home/deploy/myapp/releases/20210715194118/public/uploads ]
+ DEBUG [a5a8d0e1] Finished in 0.069 seconds with exit status 1 (failed).
+  INFO [a045f720] Running /usr/bin/env ln -s /home/deploy/myapp/shared/public/uploads /home/deploy/myapp/releases/20210715194118/public/uploads as deploy@167.172.133.67
+ DEBUG [a045f720] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" ; /usr/bin/env ln -s /home/deploy/myapp/shared/public/uploads /home/deploy/myapp/releases/20210715194118/public/uploads )
+  INFO [a045f720] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [246a45fb] Running if test ! -d /home/deploy/myapp/releases/20210715194118; then echo "Directory does not exist '/home/deploy/myapp/releases/20210715194118'" 1>&2; false; fi as deploy@167.172.133.67
+ DEBUG [246a45fb] Command: if test ! -d /home/deploy/myapp/releases/20210715194118; then echo "Directory does not exist '/home/deploy/myapp/releases/20210715194118'" 1>&2; false; fi
+ DEBUG [246a45fb] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [dc6266dc] Running $HOME/.rbenv/bin/rbenv exec rake db:migrate as deploy@167.172.133.67
+ DEBUG [dc6266dc] Command: cd /home/deploy/myapp/releases/20210715194118 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec rake db:migrate )
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/rubygems_integration.rb:12: warning: already initialized constant Bundler::RubygemsIntegration::EXT_LOCK
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/rubygems_integration.rb:12: warning: previous definition of EXT_LOCK was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/version.rb:4: warning: already initialized constant Bundler::VERSION
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/version.rb:10: warning: previous definition of VERSION was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/constants.rb:4: warning: already initialized constant Bundler::WINDOWS
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/constants.rb:4: warning: previous definition of WINDOWS was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/constants.rb:5: warning: already initialized constant Bundler::FREEBSD
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/constants.rb:5: warning: previous definition of FREEBSD was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/constants.rb:6: warning: already initialized constant Bundler::NULL
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/constants.rb:6: warning: previous definition of NULL was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/current_ruby.rb:12: warning: already initialized constant Bundler::CurrentRuby::KNOWN_MINOR_VERSIONS
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/current_ruby.rb:12: warning: previous definition of KNOWN_MINOR_VERSIONS was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/current_ruby.rb:26: warning: already initialized constant Bundler::CurrentRuby::KNOWN_MAJOR_VERSIONS
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/current_ruby.rb:24: warning: previous definition of KNOWN_MAJOR_VERSIONS was here
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/bundler-2.2.24/lib/bundler/current_ruby.rb:28: warning: already initialized constant Bundler::CurrentRuby::KNOWN_PLATFORMS
+ DEBUG [dc6266dc] 	/home/deploy/.rbenv/versions/2.6.1/lib/ruby/2.6.0/bundler/current_ruby.rb:26: warning: previous definition of KNOWN_PLATFORMS was here
+ DEBUG [dc6266dc] 	rake aborted!
+ DEBUG [dc6266dc] 	Bundler::ProductionError: Your bundle only supports platforms ["x86_64-darwin-19"] but your local platform is x86_64-linux. Add the current platform to the lockfile with `bundle lock --add-platform x86_64-linux` and try again.
+ DEBUG [dc6266dc] 	/home/deploy/myapp/releases/20210715194118/config/boot.rb:3:in `<top (required)>'
+/home/deploy/myapp/releases/20210715194118/config/application.rb:1:in `require_relative'
+/home/deploy/myapp/releases/20210715194118/config/application.rb:1:in `<top (required)>'
+/home/deploy/myapp/releases/20210715194118/Rakefile:4:in `require_relative'
+/home/deploy/myapp/releases/20210715194118/Rakefile:4:in `<top (required)>'
+ DEBUG [dc6266dc] 	(See full trace by running task with --trace)
