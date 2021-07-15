@@ -5,6 +5,7 @@ require "capistrano/setup"
 require "capistrano/deploy"
 
 require 'capistrano/rails'
+require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 require 'capistrano/rbenv'
 
