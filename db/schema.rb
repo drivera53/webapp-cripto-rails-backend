@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_06_23_194338) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "coins", force: :cascade do |t|
     t.string "coin_id"
     t.string "symbol"
