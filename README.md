@@ -10,7 +10,7 @@ If you want to start with a fresh new database you may delete `development.sqlit
 ```ruby
 rails db:migrate
 ```
-Make sure to fork its [front end repository](https://github.com/drivera53/react-flatcoin) as well.
+Make sure to fork its [front end repository](https://github.com/drivera53/webapp-cripto-react) as well.
 
 # Usage
 Run `rails s` or `rails server -p 3001` if you're currently using port 3000 in your front end. 
